@@ -2,74 +2,355 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Photo Album</title>
+  <title>Realistic Video Album</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
     }
 
     h1 {
+      text-align: center;
       padding: 20px;
-      background: #333;
-      color: white;
-      margin: 0;
+      font-size: 2em;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 15px;
       padding: 20px;
     }
 
-    .gallery a {
-      display: block;
-      overflow: hidden;
+    .card {
+      background: #1a1a1a;
       border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s;
     }
 
-    .gallery img {
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .thumb {
+      position: relative;
+    }
+
+    .thumb img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
-      transition: 0.3s;
+      display: block;
     }
 
-    .gallery img:hover {
-      transform: scale(1.1);
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 45px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .info {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-<h1>My Photo Album</h1>
+<h1>🔥 Trending Videos</h1>
 
 <div class="gallery">
 
-  <!-- Image 1 -->
-  <a href="https://your-link-1.com" target="_blank">
-    <img src="https://via.placeholder.com/300" alt="Photo 1">
+  <!-- Video 1 -->
+  <a href="https://your-video-link1.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Amazing Video Title 😍
+        <div class="stats">
+          <span>❤️ 12K</span>
+          <span>💬 1.2K</span>
+          <span>👁 50K</span>
+        </div>
+      </div>
+    </div>
   </a>
 
-  <!-- Image 2 -->
-  <a href="https://your-link-2.com" target="_blank">
-    <img src="https://via.placeholder.com/300" alt="Photo 2">
+  <!-- Video 2 -->
+  <a href="https://your-video-link2.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Viral Clip 🔥
+        <div class="stats">
+          <span>❤️ 8.5K</span>
+          <span>💬 900</span>
+          <span>👁 30K</span>
+        </div>
+      </div>
+    </div>
   </a>
 
-  <!-- Image 3 -->
-  <a href="https://your-link-3.com" target="_blank">
-    <img src="https://via.placeholder.com/300" alt="Photo 3">
+  <!-- Video 3 -->
+  <a href="https://your-video-link3.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Funny Moment 😂
+        <div class="stats">
+          <span>❤️ 15K</span>
+          <span>💬 2K</span>
+          <span>👁 80K</span>
+        </div>
+      </div>
+    </div>
   </a>
 
-  <!-- Image 4 -->
-  <a href="https://your-link-4.com" target="_blank">
-    <img src="https://via.placeholder.com/300" alt="Photo 4">
+  <!-- Video 4 -->
+  <a href="https://your-video-link4.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Must Watch 😲
+        <div class="stats">
+          <span>❤️ 6K</span>
+          <span>💬 500</span>
+          <span>👁 20K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 5 -->
+  <a href="https://your-video-link5.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Crazy Scene 🤯
+        <div class="stats">
+          <span>❤️ 20K</span>
+          <span>💬 3K</span>
+          <span>👁 100K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 6 -->
+  <a href="https://your-video-link6.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Unbelievable Trick 😲
+        <div class="stats">
+          <span>❤️ 25K</span>
+          <span>💬 4K</span>
+          <span>👁 120K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 7 -->
+  <a href="https://your-video-link7.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Street Food Magic 🍔
+        <div class="stats">
+          <span>❤️ 18K</span>
+          <span>💬 2.5K</span>
+          <span>👁 90K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 8 -->
+  <a href="https://your-video-link8.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Insane Skills 🔥
+        <div class="stats">
+          <span>❤️ 30K</span>
+          <span>💬 5K</span>
+          <span>👁 150K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 9 -->
+  <a href="https://your-video-link9.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Emotional Story 💔
+        <div class="stats">
+          <span>❤️ 40K</span>
+          <span>💬 6K</span>
+          <span>👁 200K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 10 -->
+  <a href="https://your-video-link10.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Epic Fail 😂
+        <div class="stats">
+          <span>❤️ 12K</span>
+          <span>💬 1K</span>
+          <span>👁 60K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 11 -->
+  <a href="https://your-video-link11.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Life Hack 😎
+        <div class="stats">
+          <span>❤️ 22K</span>
+          <span>💬 3K</span>
+          <span>👁 110K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 12 -->
+  <a href="https://your-video-link12.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Crazy Dance 💃
+        <div class="stats">
+          <span>❤️ 28K</span>
+          <span>💬 4.2K</span>
+          <span>👁 130K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 13 -->
+  <a href="https://your-video-link13.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Unexpected Moment 😳
+        <div class="stats">
+          <span>❤️ 35K</span>
+          <span>💬 5.5K</span>
+          <span>👁 170K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 14 -->
+  <a href="https://your-video-link14.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Animal Funny 🐶
+        <div class="stats">
+          <span>❤️ 45K</span>
+          <span>💬 7K</span>
+          <span>👁 220K</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Video 15 -->
+  <a href="https://your-video-link15.com" target="_blank">
+    <div class="card">
+      <div class="thumb">
+        <img src="https://via.placeholder.com/300">
+        <div class="play">▶</div>
+      </div>
+      <div class="info">
+        Mind Blowing 🤯
+        <div class="stats">
+          <span>❤️ 60K</span>
+          <span>💬 9K</span>
+          <span>👁 300K</span>
+        </div>
+      </div>
+    </div>
   </a>
 
 </div>
-
 </body>
 </html>

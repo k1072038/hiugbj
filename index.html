@@ -1,120 +1,75 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>বাংলাদেশে নতুন ইনকাম ট্রিক</title>
-<script>
-  atOptions = {
-    'key' : '745042a94d81f2ef04147c9c6ed6b740',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://punkblackmailmeek.com/745042a94d81f2ef04147c9c6ed6b740/invoke.js"></script>
+  <meta charset="UTF-8">
+  <title>My Photo Album</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      text-align: center;
+    }
 
-<style>
-body { font-family: Arial; margin:0; background:#f2f2f2; }
-.container { max-width:720px; margin:auto; background:#fff; padding:25px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1); text-align:center; }
-h1 { font-size:26px; margin-bottom:10px; }
-p { color:#555; }
-.hero { width:100%; border-radius:10px; }
-.step { margin:15px 0; padding:15px; border:1px solid #eee; border-radius:8px; cursor:pointer; }
-.step:hover { background:#f9f9f9; }
-.btn { background:#ff5722; color:#fff; padding:15px 25px; border:none; border-radius:8px; font-size:16px; margin:10px; cursor:pointer; }
-.countdown { color:red; font-weight:bold; margin:15px 0; }
-.payment-box { background:#f7f7f7; padding:10px; border-radius:8px; max-height:120px; overflow:hidden; text-align:left; font-size:13px; }
-</style>
+    h1 {
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery a {
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+<h1>My Photo Album</h1>
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu6CIncVYqkjFX6_A_KMIAcN-fpDJ-OE76J8rMw7zFpQ7kAJhG9XhiJWP9SXAExvGx_ZPJqjYU8f7ZEkjiI5HIhcyMgS3abV4HnHbwCVHcsw3lRSo4NmtkD2u6f-Y3TpgCpyzRCGMXM7w8ZIjX5hThazzvofGiSvfTc3nF41FAEwHy5OcjwMFvzxYM7SE/s320/images.webp" class="hero click-ad">
+<div class="gallery">
 
-<h1 class="click-ad">😲 নতুন মোবাইল ইনকাম ট্রিক!</h1>
+  <!-- Image 1 -->
+  <a href="https://your-link-1.com" target="_blank">
+    <img src="https://via.placeholder.com/300" alt="Photo 1">
+  </a>
 
-<p class="click-ad">বাংলাদেশে এখন অনেকেই এই মেথড দিয়ে আয় করছে</p>
+  <!-- Image 2 -->
+  <a href="https://your-link-2.com" target="_blank">
+    <img src="https://via.placeholder.com/300" alt="Photo 2">
+  </a>
 
-<div class="step click-ad">Step 1: কিভাবে কাজ করে দেখুন</div>
-<div class="step click-ad">Step 2: নিচে click করুন</div>
-<div class="step click-ad">Step 3: আয় শুরু করুন</div>
+  <!-- Image 3 -->
+  <a href="https://your-link-3.com" target="_blank">
+    <img src="https://via.placeholder.com/300" alt="Photo 3">
+  </a>
 
-<div class="countdown" id="timer">⏳ 05:00</div>
-
-<button class="btn main-btn">👉 এখনই শুরু করুন</button>
-<button class="btn main-btn">🎯 Continue</button>
-
-<h3>💸 Recent Payments</h3>
-<div class="payment-box" id="payments"></div>
+  <!-- Image 4 -->
+  <a href="https://your-link-4.com" target="_blank">
+    <img src="https://via.placeholder.com/300" alt="Photo 4">
+  </a>
 
 </div>
-
-<script>
-
-// ===============================
-// 🔗 LINKS (CHANGE IF NEEDED)
-const adLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";
-const mainLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";
-
-// ===============================
-// HERO / STEP CLICK → OPEN AD
-document.querySelectorAll(".click-ad").forEach(el=>{
-  el.addEventListener("click", (e)=>{
-    e.stopPropagation();
-    window.open(adLink, "_blank");
-  });
-});
-
-// ===============================
-// BUTTON CLICK → MAIN LINK
-document.querySelectorAll(".main-btn").forEach(el=>{
-  el.addEventListener("click", ()=>{
-    window.location.href = mainLink;
-  });
-});
-
-// ===============================
-// COUNTDOWN TIMER
-let t=300;
-setInterval(()=>{
-  let m=Math.floor(t/60);
-  let s=t%60;
-  document.getElementById("timer").innerText = `⏳ ${m}:${s<10?'0'+s:s}`;
-  if(t>0) t--;
-},1000);
-
-// ===============================
-// FAKE PAYMENTS
-const msgs=[
-"Rahim got $12",
-"Fatema received payment",
-"Hasan earned $7",
-"Sumaiya got first payment",
-"Tanvir made $5",
-];
-
-setInterval(()=>{
-  let d=document.createElement("div");
-  d.innerText=msgs[Math.floor(Math.random()*msgs.length)];
-  document.getElementById("payments").prepend(d);
-},2000);
-
-// ===============================
-// ONE-TIME POPUP (ONLY FIRST CLICK)
-let clickedOnce = false;
-
-document.addEventListener("click", function(e){
-  if(!clickedOnce && !e.target.closest(".main-btn")){
-    clickedOnce = true;
-    window.open(adLink, "_blank");
-  }
-});
-
-</script>
 
 </body>
 </html>

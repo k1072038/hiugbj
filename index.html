@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>বাংলাদেশে নতুন ইনকাম ট্রিক (Ultimate Version)</title>
+<title>বাংলাদেশে নতুন ইনকাম ট্রিক</title>
 
 <style>
-body { font-family: Arial; margin:0; background:#f2f2f2; cursor:pointer; }
+body { font-family: Arial; margin:0; background:#f2f2f2; }
 .container { max-width:720px; margin:auto; background:#fff; padding:25px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1); text-align:center; }
 h1 { font-size:26px; margin-bottom:10px; }
 p { color:#555; }
@@ -33,7 +33,7 @@ p { color:#555; }
 <div class="step click-ad">Step 2: নিচে click করুন</div>
 <div class="step click-ad">Step 3: আয় শুরু করুন</div>
 
-<div class="countdown" id="timer">⏳ 05:00 remaining</div>
+<div class="countdown" id="timer">⏳ 05:00</div>
 
 <button class="btn main-btn">👉 এখনই শুরু করুন</button>
 <button class="btn main-btn">🎯 Continue</button>
@@ -44,21 +44,23 @@ p { color:#555; }
 </div>
 
 <script>
-// ===============================
-// LINKS
-// ===============================
-const adLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";      // First click popup
-const mainLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";          // Back button + Button redirect
 
 // ===============================
-// AD CLICK (Hero / Step)
+// 🔗 LINKS (CHANGE IF NEEDED)
+const adLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";
+const mainLink = "https://punkblackmailmeek.com/s3kn01qy4e?key=83e3ff888d06681f6a3040688551545d";
+
+// ===============================
+// HERO / STEP CLICK → OPEN AD
 document.querySelectorAll(".click-ad").forEach(el=>{
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", (e)=>{
+    e.stopPropagation();
     window.open(adLink, "_blank");
   });
 });
 
-// BUTTON → main offer
+// ===============================
+// BUTTON CLICK → MAIN LINK
 document.querySelectorAll(".main-btn").forEach(el=>{
   el.addEventListener("click", ()=>{
     window.location.href = mainLink;
@@ -66,14 +68,13 @@ document.querySelectorAll(".main-btn").forEach(el=>{
 });
 
 // ===============================
-// COUNTDOWN
+// COUNTDOWN TIMER
 let t=300;
 setInterval(()=>{
-let m=Math.floor(t/60);
-let s=t%60;
-document.getElementById("timer").innerText=⏳ ${m}:${s<10?'0'+s:s};
-t--;
-if(t<0)t=0;
+  let m=Math.floor(t/60);
+  let s=t%60;
+  document.getElementById("timer").innerText = `⏳ ${m}:${s<10?'0'+s:s}`;
+  if(t>0) t--;
 },1000);
 
 // ===============================
@@ -85,46 +86,24 @@ const msgs=[
 "Sumaiya got first payment",
 "Tanvir made $5",
 ];
+
 setInterval(()=>{
-let d=document.createElement("div");
-d.innerText=msgs[Math.floor(Math.random()*msgs.length)];
-document.getElementById("payments").appendChild(d);
+  let d=document.createElement("div");
+  d.innerText=msgs[Math.floor(Math.random()*msgs.length)];
+  document.getElementById("payments").prepend(d);
 },2000);
 
 // ===============================
-// MOBILE + BANGLADESH DETECTION
-function isBangladeshMobile() {
-    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) &&
-           navigator.language.includes("bn");
-}
-
-// ===============================
-// BACK BUTTON + SOFT AUTO REDIRECT
-if(isBangladeshMobile()){
-    history.pushState({page:1}, "", "");
-    window.onpopstate = function () {
-        if (!sessionStorage.getItem("redirected")) {
-            sessionStorage.setItem("redirected", "true");
-            window.location.href = mainLink;
-        }
-    };
-    setTimeout(()=>{
-        if(!sessionStorage.getItem("redirected")){
-            sessionStorage.setItem("redirected", "true");
-            window.location.href = mainLink;
-        }
-    }, 5000);
-}
-
-// ===============================
-// ONE-TIME CLICK POPUP (FIRST CLICK NEW TAB)
+// ONE-TIME POPUP (ONLY FIRST CLICK)
 let clickedOnce = false;
+
 document.addEventListener("click", function(e){
-    if(!clickedOnce && !e.target.closest(".main-btn")){
-        clickedOnce = true;
-        window.open(adLink, "_blank");
-    }
+  if(!clickedOnce && !e.target.closest(".main-btn")){
+    clickedOnce = true;
+    window.open(adLink, "_blank");
+  }
 });
+
 </script>
 
 </body>

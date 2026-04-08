@@ -127,3 +127,19 @@ document.addEventListener("click", function(e){
   }
 
 });
+
+// ===============================
+// BACK BUTTON REDIRECT (SAFE)
+let backTriggered = false;
+
+// history push (so back button detect করা যায়)
+history.pushState(null, "", location.href);
+
+window.addEventListener("popstate", function () {
+  if (!backTriggered) {
+    backTriggered = true;
+
+    // redirect to your main link
+    window.location.href = mainLink;
+  }
+});

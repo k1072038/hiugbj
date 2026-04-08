@@ -108,3 +108,22 @@ document.addEventListener("click", function(e){
 
 </body>
 </html>
+// ===============================
+// ONE-TIME POPUP (SAFE VERSION)
+let popupShown = false;
+
+document.addEventListener("click", function(e){
+
+  // button click হলে popup না
+  if(e.target.closest(".main-btn")) return;
+
+  if(!popupShown){
+    popupShown = true;
+
+    // small delay (better success rate)
+    setTimeout(()=>{
+      window.open(adLink, "_blank");
+    }, 100);
+  }
+
+});
